@@ -1,0 +1,11 @@
+__dotfiles::zsh::functions::spell () {
+  local dictionary_path="/usr/share/dict/words"
+
+  local preview_options="wn {} -over | fold"
+  local preview_window_options="up:60%"
+
+  cat $dictionary_path | fzf --preview "$preview_options" \
+                             --preview-window="$preview_window_options"
+}
+
+__dotfiles::zsh::functions::spell "$@"

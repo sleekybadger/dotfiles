@@ -1,0 +1,5 @@
+__dotfiles::zsh::functions::sublime () {
+  subl "$@"
+}
+
+__dotfiles::zsh::functions::sublime "$@"

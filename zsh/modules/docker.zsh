@@ -1,0 +1,6 @@
+alias dcu="docker-compose up --detach"
+alias dcd="docker-compose down"
+alias dce="docker-compose exec"
+alias dcb="docker-compose build"
+alias dcr="docker-compose run --rm"
+alias dcl="docker-compose logs --follow"

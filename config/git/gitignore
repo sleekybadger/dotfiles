@@ -1,0 +1,18 @@
+# Python
+
+*.pyc
+
+# macOS
+
+Thumbs.db
+Desktop.ini
+
+._*
+.DS_Store
+.Trashes
+.Spotlight-V100
+
+# Sublime
+
+*.sublime-project
+*.sublime-workspace

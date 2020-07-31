@@ -1,0 +1,10 @@
+__dotfiles::zsh::helpers::is_interactive () {
+  if [[ -n "$PS1" ]]
+  then
+    return 0
+  else
+    return 1
+  fi
+}
+
+__dotfiles::zsh::helpers::is_interactive "$@"

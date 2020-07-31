@@ -1,0 +1,15 @@
+__dotfiles::zsh::helpers::wifi_speed () {
+  local airport_output=$(airport -I)
+
+  local state=$(echo "$airport_output" | grep "AirPort" | sed "s/.*: //")
+  local speed=$(echo "$airport_output" | grep "lastTxRate" | sed "s/.*: //")
+
+  if [[ $state == "Off" ]]
+  then
+    echo "0"
+  else
+    echo "$speed"
+  fi
+}
+
+__dotfiles::zsh::helpers::wifi_speed "$@"

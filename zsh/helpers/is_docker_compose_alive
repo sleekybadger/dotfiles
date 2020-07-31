@@ -1,0 +1,14 @@
+__dotfiles::zsh::functions::is_docker_compose_alive () {
+  local docker_compose_file="$1"
+  if [[ -f "$docker_compose_file" ]] || return
+
+  local docker_compose_status=$(docker-compose --file=$docker_compose_file ps --services --filter "status=running")
+  if [[ -n "$docker_compose_status" ]]
+  then
+    return 0
+  else
+    return 1
+  fi
+}
+
+__dotfiles::zsh::functions::is_docker_compose_alive "$@"

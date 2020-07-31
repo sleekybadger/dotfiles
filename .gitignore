@@ -1,0 +1,13 @@
+*.local
+
+/tmux/plugins/*
+!/tmux/plugins/.gitkeep
+
+/zsh/plugins/*
+!/zsh/plugins/.gitkeep
+
+/sublime/WakaTime.sublime-settings
+"/sublime/Package Control.user-ca-bundle"
+"/sublime/Package Control.merged-ca-bundle"
+"/sublime/Package Control.last-run"
+"/sublime/oscrypto-ca-bundle.crt"

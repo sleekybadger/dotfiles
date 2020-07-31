@@ -1,0 +1,8 @@
+typeset -ax rvm_configure_flags
+
+rvm_configure_flags+=("--with-openssl-dir=/usr/local/opt/openssl")
+rvm_configure_flags+=("--with-readline-dir=/usr/local/opt/readline")
+
+export rvm_nice=1
+export rvm_silence_path_mismatch_check_flag=1
+export rvm_gem_options=""

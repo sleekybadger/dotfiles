@@ -1,0 +1,10 @@
+__dotfiles::zsh::functions::dic () {
+  if [[ $# -eq 0 ]]
+  then
+    wn $(spell) -over | fold
+  else
+    wn $1 -over | fold
+  fi
+}
+
+__dotfiles::zsh::functions::dic "$@"

@@ -1,0 +1,33 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"ayu",
+		"Babel",
+		"BracketHighlighter",
+		"CodeStats",
+		"Color Highlight",
+		"Dockerfile Syntax Highlighting",
+		"GitGutter",
+		"HTML Mustache",
+		"Indent XML",
+		"LESS",
+		"Mustache",
+		"Origami",
+		"Package Control",
+		"Pretty JSON",
+		"SCSS",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-eslint",
+		"TOML",
+		"TypeScript",
+		"WakaTime"
+	]
+}

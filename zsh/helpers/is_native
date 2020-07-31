@@ -1,0 +1,10 @@
+__dotfiles::zsh::helpers::is_native () {
+  if [[ $TERM_PROGRAM =~ ^(Kitty|iTerm|Apple|Alacritty) ]]
+  then
+    return 0
+  else
+    return 1
+  fi
+}
+
+__dotfiles::zsh::helpers::is_native "$@"

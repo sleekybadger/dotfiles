@@ -1,0 +1,5 @@
+__dotfiles::zsh::functions::ls () {
+  exa "$@" --group-directories-first --icons
+}
+
+__dotfiles::zsh::functions::ls "$@[2,-1]"

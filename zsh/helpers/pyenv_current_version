@@ -1,0 +1,20 @@
+__dotfiles::zsh::helpers::pyenv_current_version () {
+  local is_python_environment
+  local python_version
+
+  is_python_environment=$(/bin/ls -pa | grep -v / | grep -e "\.python-version" -e "requirements.txt" -e "\.py$")
+  if [[ -n $is_python_environment ]]
+  then
+    python_version=$(pyenv version-name 2>/dev/null)
+    if [[ -n $python_version ]]
+    then
+      echo $python_version
+    else
+      echo "none"
+    fi
+  else
+    echo "none"
+  fi
+}
+
+__dotfiles::zsh::helpers::pyenv_current_version "$@"

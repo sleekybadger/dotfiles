@@ -1,0 +1,28 @@
+cache_dir = File.join(ENV.fetch("XDG_CACHE_HOME") { "~/.cache" }, "pry")
+
+Pry.config.editor = "vim"
+Pry.config.history.file = File.join(cache_dir, "history")
+
+Pry.hooks.add_hook :before_session, "local:change_title_to_pry" do
+  Process.setproctitle "pry"
+end
+
+Pry.hooks.add_hook :after_session, "local:change_title_to_ruby" do
+  Process.setproctitle "ruby"
+end
+
+if defined?(PryByebug)
+  Pry.commands.alias_command "c", "continue"
+  Pry.commands.alias_command "s", "step"
+  Pry.commands.alias_command "n", "next"
+  Pry.commands.alias_command "f", "finish"
+end
+
+begin
+  require "awesome_print"
+
+  Pry.config.print = proc do |output, value|
+    Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)
+  end
+rescue LoadError => err
+end

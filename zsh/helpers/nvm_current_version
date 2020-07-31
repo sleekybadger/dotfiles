@@ -1,0 +1,20 @@
+__dotfiles::zsh::helpers::nvm_current_version () {
+  local is_node_environment
+  local node_version
+
+  is_node_environment=$(/bin/ls -pa | grep -v / | grep -e ".nvmrc" -e "package.json" -e "\.js$")
+  if [[ -n $is_node_environment ]]
+  then
+    node_version=$(nvm current 2>/dev/null | sed -E "s/.*v([0-9.]*).*/\1/")
+    if [[ -n $node_version ]]
+    then
+      echo $node_version
+    else
+      echo "none"
+    fi
+  else
+    echo "none"
+  fi
+}
+
+__dotfiles::zsh::helpers::nvm_current_version "$@"

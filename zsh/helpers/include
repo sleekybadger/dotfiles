@@ -1,0 +1,8 @@
+__dotfiles::zsh::helpers::include () {
+  if [[ -s "$DOTFILES_DIR/zsh/$1.zsh" ]]
+  then
+    source "$DOTFILES_DIR/zsh/$1.zsh"
+  fi
+}
+
+__dotfiles::zsh::helpers::include "$@"

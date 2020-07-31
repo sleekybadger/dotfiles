@@ -1,0 +1,18 @@
+[submodule "vendor/zplug"]
+	path = vendor/zplug
+	url = https://github.com/zplug/zplug
+[submodule "vendor/dotbot"]
+	path = vendor/dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "vendor/base16"]
+	path = vendor/base16
+	url = https://github.com/chriskempson/base16-shell
+[submodule "vendor/drakula"]
+	path = vendor/drakula
+	url = https://github.com/dracula/sublime
+[submodule "vendor/tpm"]
+	path = vendor/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "vendor/nvm"]
+	path = vendor/nvm
+	url = https://github.com/creationix/nvm

@@ -1,0 +1,20 @@
+__dotfiles::zsh::helpers::goenv_current_version () {
+  local is_go_environment
+  local go_version
+
+  is_go_environment=$(/bin/ls -pa | grep -v / | grep -e ".go-version" -e "Gopkg.toml" -e "\.go$")
+  if [[ -n $is_go_environment ]]
+  then
+    go_version=$(goenv version-name 2>/dev/null)
+    if [[ -n $go_version ]]
+    then
+      echo $go_version
+    else
+      echo "none"
+    fi
+  else
+    echo "none"
+  fi
+}
+
+__dotfiles::zsh::helpers::goenv_current_version "$@"

@@ -1,0 +1,44 @@
+---
+
+- defaults:
+   link:
+     force: true
+     create: true
+     relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.dotfiles/tmux/plugins/tpm: vendor/tpm
+
+    ~/bin: bin
+    ~/Library/Application Support/Sublime Text 3/Packages/User: sublime
+
+    ~/.zshrc: zsh/zshrc.zsh
+    ~/.zshenv: zsh/zshenv.zsh
+
+    ~/.tmux.conf: tmux/tmux.conf
+
+    ~/.gnupg/gpg.conf: gnupg/gpg.conf
+    ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
+
+    ~/.gemrc: config/gemrc
+    ~/.rvmrc: config/rvmrc
+    ~/.vimrc: config/vimrc
+    ~/.eslintrc: config/eslintrc
+    ~/.SpaceVim.d/init.toml: config/spaceVim
+    ~/.hushlogin: config/hushlogin
+
+    ~/.config/git: config/git
+    ~/.config/pry: config/pry
+    ~/.config/bat/config: config/bat
+    ~/.config/bat/themes/drakula/Dracula.tmTheme: vendor/drakula/Dracula.tmTheme
+    ~/.config/alacritty: config/alacritty
+    ~/.config/thefuck: config/thefuck
+
+- shell:
+    - [scripts/brew.sh, Installing homebrew packages]
+    - [scripts/mas.sh, Installing app store packages]
+    - [scripts/rvm.sh, Installing rvm]
+    - [scripts/mac.sh, Configuring macOS]

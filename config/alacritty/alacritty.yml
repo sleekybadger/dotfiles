@@ -1,0 +1,29 @@
+env:
+  TERM: alacritty
+  TERM_PROGRAM: Alacritty
+
+window:
+  decorations: full
+  startup_mode: Fullscreen
+
+cursor:
+  style: Underline
+
+font:
+  size: 12.5
+
+  normal:
+    family: mononoki Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: Smononoki Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: mononoki Nerd Font Mono
+    style: Italic
+
+  bold_italic:
+    family: mononoki Nerd Font Mono
+    style: Bold Italic
